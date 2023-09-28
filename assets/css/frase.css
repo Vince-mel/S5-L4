@@ -1,5 +1,8 @@
 body {
+  margin: 0;
+  padding: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: lightcyan;
 }
 .container {
   width: 80%;
@@ -10,67 +13,139 @@ body {
   justify-content: center;
 }
 #testoAlternato {
+  background-color: white;
   width: 55%;
   padding: 30px;
   font-size: 1.5em;
   display: inline-block;
-  border: 2px solid gray;
+  border: 4px solid rgb(107, 106, 106);
 }
 .parole {
   position: relative;
 }
 .parole i {
-  color: teal;
+  font-style: italic;
+  font-weight: 700;
+  color: rgb(2, 112, 112);
   width: 250px;
-  padding-left: 5px;
+  padding-left: 20px;
+  padding-top: 1px;
+  font-size: 1.1em;
   position: absolute;
 }
 .parole i:nth-of-type(1) {
   position: absolute;
-  top: -240px;
+  top: 0px;
   animation-name: scroll1;
-  animation-duration: 5s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
 }
-.parole i:nth-of-type(3) {
+.parole i:nth-of-type(2) {
+  animation-name: scroll2;
+  animation-duration: 15s;
+  color: white;
+  animation-iteration-count: infinite;
   position: absolute;
-  top: 240px;
+  top: -90px;
+}
+.parole i:nth-of-type(3) {
+  animation-name: scroll3;
+  animation-duration: 15s;
+  color: white;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 90px;
 }
 
 @keyframes scroll1 {
   0% {
-    transform: translateY(0px);
+    color: white;
+    transform: translateX(90px);
     opacity: 0;
   }
-  30% {
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(240px);
+  6.6% {
+    transform: translateX(0px);
     opacity: 1;
+    color: teal;
   }
-  80% {
+  26.4% {
+    opacity: 1;
+    color: teal;
+    transform: translateX(0px);
+  }
+  33% {
+    color: white;
+    transform: translateX(90px);
     opacity: 0;
   }
   100% {
+    color: white;
+    transform: translateX(90px);
+    opacity: 0;
+  }
+}
+@keyframes scroll2 {
+  0% {
+    color: white;
+    opacity: 0;
+  }
+  33% {
+    color: white;
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  39.9% {
+    transform: translateY(90px);
+    opacity: 1;
+    color: teal;
+  }
+  59.4% {
+    opacity: 1;
+    color: teal;
+    transform: translateY(90px);
+  }
+  66% {
+    color: white;
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    color: white;
     transform: translateY(0px);
     opacity: 0;
   }
 }
-@keyframes changeColor {
+
+@keyframes scroll3 {
   0% {
-    opacity: 1;
-  }
-  5% {
+    color: white;
     opacity: 0;
   }
-  50% {
-    opacity: 1;
+  66% {
+    color: white;
+    opacity: 0;
+    transform: translateY(0px);
   }
-  55% {
+
+  72.6% {
+    transform: translateY(-90px);
+    opacity: 1;
+    color: teal;
+  }
+  93.4% {
+    opacity: 1;
+    color: teal;
+    transform: translateY(-90px);
+  }
+  99% {
+    color: white;
+    transform: translateY(0px);
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    color: white;
+    transform: translateY(0px);
+    opacity: 0;
   }
 }
