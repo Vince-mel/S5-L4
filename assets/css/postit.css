@@ -1,0 +1,170 @@
+body {
+  background-color: lightcyan;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.stick {
+  background-color: #795548;
+  width: 21px;
+  height: 64.4vh;
+}
+
+#blackboard {
+  width: 40%;
+  background-color: rgba(48, 48, 48, 0.92);
+  height: 60vh;
+  border-top: 20px solid #795548;
+  border-bottom: 20px solid #795548;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#blackboard > article {
+  transition: all 0.9s ease;
+  width: 20%;
+  margin: 0px 2%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px -15px black;
+}
+
+.card-1 {
+  background-color: #F7F7C5;
+  animation-name: animate1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.card-2 {
+  background-color: lightcoral;
+  animation-name: animate2;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+.card-3 {
+  background-color:#CACAFA;
+  animation-name: animate3;
+  animation-duration: 0.9s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+.card-4 {
+  background-color: #C6F6C9;
+  animation-name: animate4;
+  animation-duration: 1.4s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+.card-5 {
+  background-color: #F7F7C5;
+  animation-name: animate5;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.card-6 {
+  background-color:#CACAFA;
+  animation-name: animate6;
+  animation-duration: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+.card-7 {
+  background-color:#F7F7C5;
+  animation-name: animate7;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.card-8 {
+  background-color: #C6F6C9;
+  animation-name: animate8;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes animate1 {
+  0% {
+    transform: scale(4);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(-5deg);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(5deg);
+  }
+}
+@keyframes animate5 {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(-10deg);
+  }
+}
+@keyframes animate6 {
+  0% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(-6deg);
+  }
+}
+@keyframes animate7 {
+  0% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(11deg);
+  }
+}
+@keyframes animate8 {
+  0% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(4deg);
+  }
+}
+#blackboard article:hover {
+  cursor: pointer;
+  z-index: 1;
+  transform: scale(1.2);
+  box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.696);
+}
